@@ -7,6 +7,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   flex:  1 1 auto;
 }
 .image-size {
-  width: 300px;
+  width: 350px;
   height: 500px;
 }
