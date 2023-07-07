@@ -1,7 +1,7 @@
 <h1>
-  Editar / Agregar
+  {{ currentHero.id ? 'Editar' : 'Agregar' }}
   Héroe
-  <small>Superman</small>
+  <small *ngIf="currentHero.id">{{ currentHero.superhero }}</small>
 </h1>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -81,6 +81,7 @@
           </button>
 
           <button
+            *ngIf="currentHero.id"
             color="warn"
             mat-flat-button>
             Borrar
