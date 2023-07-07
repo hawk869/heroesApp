@@ -81,6 +81,7 @@
           </button>
 
           <button
+            (click)="onDeleteHero()"
             *ngIf="currentHero.id"
             color="warn"
             mat-flat-button>
