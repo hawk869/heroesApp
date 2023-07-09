@@ -7,7 +7,7 @@ import {Observable, tap} from "rxjs";
 @Injectable({ providedIn: 'root'})
 export class AuthService {
 
-  private baseUrl = environments;
+  private baseUrl = environments.baseUrl;
   private user?: User;
   constructor(
     private http: HttpClient
@@ -22,7 +22,11 @@ export class AuthService {
     return this.http.get<User>(`${ this.baseUrl }/users/1`)
       .pipe(
         tap( user => this.user = user),
-        tap( user => localStorage.setItem('token', user.id.toString()))
+        tap( user => localStorage.setItem('token', 'AsdfFasdf.RTdadfEFDsa.ASDFASDfasdf'))
       );
+  }
+  logout() {
+    this.user = undefined;
+    localStorage.clear();
   }
 }
